@@ -1,0 +1,33 @@
+digraph G {
+   subgraph cluster3 {
+      keymasterd [URL="https://github.com/Cloud-Foundations/keymaster/blob/master/README.md"]
+      cloudfate [URL="https://github.com/Cloud-Foundations/cloud-gate/blob/master/README.md"]
+      cloudgate -> keymasterd
+      label = iam
+   }
+   subgraph cluster0 {
+   Imaginator -> ImageServer
+   AmiPublisher -> ImageServer
+   AmiPublisher -> ImageUnpacker
+      label =  Imaginator
+   }
+   subgraph cluster1 {
+   Dominator [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/user-guide/README.md"]
+   Dominator -> MDB
+   Dominator -> Subd
+   Dominator -> ImageServer
+   Subd -> ImageServer
+    label =  Dominator
+   }
+   subgraph cluster2 {
+     FleetManager -> Hypervisor
+     Hypervisor -> ImageServer [style=dotted];
+     installer-> Hypervisor
+     installer -> ImageServer
+     FleetManager -> keymasterd
+     Hypervisor -> keymasterd
+     label = SmallStack
+   }
+   MDB -> FleetManager [style=dotted];   
+   MDB -> Hypervisor [style=dotted];
+}
