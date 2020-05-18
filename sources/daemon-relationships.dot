@@ -1,0 +1,41 @@
+digraph G {
+   node [style=filled,color=lightblue1];
+   fillcolor= "blue"
+   subgraph cluster3 {
+      keymasterd [URL="https://github.com/Cloud-Foundations/keymaster/blob/master/README.md"]
+      cloudgate [URL="https://github.com/Cloud-Foundations/cloud-gate/blob/master/README.md"]
+      cloudgate -> keymasterd
+      label = iam
+   }
+   subgraph cluster0 {
+   ImageServer [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/imageserver/README.md"]
+   Imaginator [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/imaginator/README.md"]
+   Imaginator -> ImageServer
+   AmiPublisher -> ImageServer
+   AmiPublisher -> ImageUnpacker
+      label =  Imaginator
+   }
+   subgraph cluster1 {
+   Dominator [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/user-guide/README.md"]
+   MDB [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/mdbd/README.md"]
+   Subd [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/subd/README.md"]
+   Dominator -> MDB
+   Dominator -> Subd
+   Dominator -> ImageServer
+   Subd -> ImageServer
+    label =  Dominator
+   }
+   subgraph cluster2 {
+     Hypervisor [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/hypervisor/README.md"]
+     FleetManager [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/fleet-manager/README.md"]
+     FleetManager -> Hypervisor
+     Hypervisor -> ImageServer [style=dotted];
+     installer-> Hypervisor
+     installer -> ImageServer
+     FleetManager -> keymasterd
+     Hypervisor -> keymasterd
+     label = SmallStack
+   }
+   MDB -> FleetManager [style=dotted];   
+   MDB -> Hypervisor [style=dotted];
+}
