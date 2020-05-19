@@ -3,6 +3,8 @@ ifeq ($(TARGET_DIR),)
 	TARGET_DIR := content
 endif
 
+all: index images css
+
 index: images css
 	pandoc -o ${TARGET_DIR}/index.html -s --css common.css sources/index.md 
 
