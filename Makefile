@@ -12,7 +12,10 @@ endif
 
 all: index images css
 
+fresh: clean all
+
 index: images css
+	mkdir -p ${TARGET_DIR}
 	pandoc -o ${TARGET_DIR}/index.html -s --css common.css sources/index.md
 	cp convert.py ${TARGET_DIR}	
 	cd ${TARGET_DIR} && python convert.py index.html
@@ -20,12 +23,13 @@ index: images css
 	rm ${TARGET_DIR}/convert.py
 
 css:
-	mkdir -p ${TARGET_DIR}/
+	mkdir -p ${TARGET_DIR}
 	cp sources/common.css ${TARGET_DIR}/
 
 images:
-	mkdir -p ${TARGET_DIR}/images/
+	mkdir -p ${TARGET_DIR}/images
 	dot -Tsvg -o${TARGET_DIR}/images/daemon-relationships.svg sources/daemon-relationships.dot
+
 clean:
 	rm -rf ${TARGET_DIR}/*
 
