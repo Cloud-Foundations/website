@@ -14,8 +14,9 @@ done
 # Compile *.md files except GitHub README.md
 for file in $(find . -type f -name '*.md' -print); do
     [ "${file##*/}" = "README.md" ] && continue
+    css_url="$(realpath --relative-to=${file%/*} .)/common.css"
     mkdir -p "${target_dir}/${file%/*}"
-    pandoc -o "${target_dir}/${file%.md}.html" -s --css common.css "$file"
+    pandoc -o "${target_dir}/${file%.md}.html" -s --css "$css_url" "$file"
 done
 
 # Compile *.dot files.
