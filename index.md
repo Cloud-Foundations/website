@@ -6,7 +6,8 @@
 
 The Cloud Foundations tools come primiarily from the work
 started at Symantec Corporation for the 
-cloud-platform enginneering division.
+cloud-platform enginneering division. See the [About](misc/about.html)
+page for more information.
 
 ## The Cloud Foundations Ecosystem
 
