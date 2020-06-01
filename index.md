@@ -13,7 +13,7 @@ page for more information.
 
 While not designed together the cloudfoundations tools
 form an ecosystem of four(4) subclusters:
-Identity and access management, Image creation and Distribution,
+Identity and Access Management, Image creation and Distribution,
 Machine Domination, and Virtual Machine Management.
 
 Their dependency relastionships can be visualized here:
@@ -44,15 +44,15 @@ be approved for what.
 
 The imaginator cluster includes all tools for image creation
 and distribution. The system generates images for AWS, OpenStack,
-and SmallStack (see below).
+and [SmallStack](SmallStack/DesignDoc.html) (see below).
 
-### SmallStack
+### [SmallStack](SmallStack/DesignDoc.html)
 
-SmallStack was the answer to the question on how to manage
-our fleet of on-prem vm given the complete shutdown of the
-openstack environment. While there were tools like proxmux
-that could take over the environment we found them with 
-several limitations.
+[SmallStack](SmallStack/DesignDoc.html) was the answer to the question
+of how to manage our fleet of on-prem VMs given the complete shutdown
+of the OpenStack environment. While there were tools like proxmux that
+could take over the environment we found them with several
+limitations.
 
 ### Dominator
 
@@ -67,9 +67,10 @@ The cloudfoundations tools include:
 
 Name      |Role             |Documents
 ----------|-----------------|------
-[Keymaster](https://github.com/Cloud-Foundations/keymaster) |Authentication   |[Design Doc](https://github.com/Cloud-Foundations/keymaster/blob/master/docs/Keymaster-DesignDoc.md)
-[Dominator](https://github.com/Cloud-Foundations/Dominator) |Image-based deploy and patching       |[Design Doc](https://github.com/Cloud-Foundations/Dominator/blob/master/design-docs/Dominator/README.md)
+[Dominator](https://github.com/Cloud-Foundations/Dominator)|Image-based deploy and patching|[Design Doc](https://github.com/Cloud-Foundations/Dominator/blob/master/design-docs/Dominator/README.md)
 [Cloud-Gate](https://github.com/Cloud-Foundations/cloud-gate)|AWS access broker|[Design Doc](http://bit.ly/356rtXp)
+[Keymaster](https://github.com/Cloud-Foundations/keymaster)|Authentication   |[Design Doc](https://github.com/Cloud-Foundations/keymaster/blob/master/docs/Keymaster-DesignDoc.md)
+[SmallStack](https://github.com/Cloud-Foundations/Dominator)|Virtual Machine Management|[Design Doc](SmallStack/DesignDoc.html)
 
 
 ---------------
