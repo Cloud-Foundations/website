@@ -69,7 +69,7 @@ Name      |Role             |Documents
 ----------|-----------------|------
 [Dominator](https://github.com/Cloud-Foundations/Dominator)|Image-based deploy and patching|[Design Doc](https://github.com/Cloud-Foundations/Dominator/blob/master/design-docs/Dominator/README.md)
 [Cloud-Gate](https://github.com/Cloud-Foundations/cloud-gate)|AWS access broker|[Design Doc](http://bit.ly/356rtXp)
-[Keymaster](https://github.com/Cloud-Foundations/keymaster)|Authentication   |[Design Doc](https://github.com/Cloud-Foundations/keymaster/blob/master/docs/Keymaster-DesignDoc.md)
+[Keymaster](https://github.com/Cloud-Foundations/keymaster)|Authentication|[Design Doc](Keymaster/DesignDoc.html)
 [SmallStack](https://github.com/Cloud-Foundations/Dominator)|Virtual Machine Management|[Design Doc](SmallStack/DesignDoc.html)
 
 
