@@ -54,11 +54,12 @@ of the OpenStack environment. While there were tools like proxmux that
 could take over the environment we found them with several
 limitations.
 
-### Dominator
+### [Dominator](Dominator/DesignDoc.html)
 
-The first of the cluster of the cloud-foundations ecosystem.
-Designed as an open-source improvement of Borg its goal is
-machine domination with focus on stateful machines.
+The first of the cluster of the Cloud-Foundations ecosystem.  Designed
+as an open-source improvement of the Assimilator (an internal Google
+system used to deploy and update the OS+Borg to physical machines) its
+goal is machine domination with focus on stateful machines.
 
 ## Tool List
 
@@ -67,7 +68,7 @@ The cloudfoundations tools include:
 
 Name      |Role             |Documents
 ----------|-----------------|------
-[Dominator](https://github.com/Cloud-Foundations/Dominator)|Image-based deploy and patching|[Design Doc](https://github.com/Cloud-Foundations/Dominator/blob/master/design-docs/Dominator/README.md)
+[Dominator](https://github.com/Cloud-Foundations/Dominator)|Image-based deploy and patching|[Design Doc](Dominator/DesignDoc.html)
 [Cloud-Gate](https://github.com/Cloud-Foundations/cloud-gate)|AWS access broker|[Design Doc](http://bit.ly/356rtXp)
 [Keymaster](https://github.com/Cloud-Foundations/keymaster)|Authentication|[Design Doc](Keymaster/DesignDoc.html)
 [SmallStack](https://github.com/Cloud-Foundations/Dominator)|Virtual Machine Management|[Design Doc](SmallStack/DesignDoc.html)
