@@ -19,6 +19,12 @@ for file in $(find . -type f -name '*.md' -print); do
     pandoc -o "${target_dir}/${file%.md}.html" -s --css "$css_url" "$file"
 done
 
+# Copy *.svg files.
+for file in $(find . -type f -name '*.svg' -print); do
+    mkdir -p "${target_dir}/${file%/*}"
+    cp -p "$file" "${target_dir}/${file}"
+done
+
 # Compile *.dot files.
 for file in $(find . -type f -name '*.dot' -print); do
     mkdir -p "${target_dir}/${file%/*}"
