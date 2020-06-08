@@ -5,7 +5,7 @@ digraph G {
       keymasterd [URL="https://github.com/Cloud-Foundations/keymaster/blob/master/README.md"]
       cloudgate [URL="https://github.com/Cloud-Foundations/cloud-gate/blob/master/README.md"]
       cloudgate -> keymasterd
-      label = iam
+      label = IAM
    }
    subgraph cluster0 {
    ImageServer [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/imageserver/README.md"]
