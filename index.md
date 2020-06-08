@@ -22,7 +22,7 @@ Their dependency relastionships can be visualized here:
 
 ### Identity and Access Management
 
-Two tools belong on this cluster: 
+Two tools belong in this cluster: 
 [keymaster](https://github.com/Cloud-Foundations/keymaster) and 
 [cloud-gate](https://github.com/Cloud-Foundations/cloud-gate).
 Both of these tools generate ephemeral credentials for accessing
@@ -64,7 +64,7 @@ goal is machine domination with focus on stateful machines.
 ## Tool List
 
 
-The cloudfoundations tools include: 
+The Cloud Foundations tools include: 
 
 Name      |Role             |Documents
 ----------|-----------------|------
@@ -78,5 +78,4 @@ Name      |Role             |Documents
 
 ## Some final remarks
 
-YAY we might need to add some copyright here
-
+Copyright 2019-2020 cloud-foundations.org
