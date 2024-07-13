@@ -30,11 +30,14 @@ digraph G {
      FleetManager [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/fleet-manager/README.md"]
      FleetManager -> Hypervisor
      Hypervisor -> ImageServer [style=dotted];
-     installer-> Hypervisor
-     installer -> ImageServer
      FleetManager -> keymasterd
      Hypervisor -> keymasterd
      label = SmallStack
+   }
+   subgraph cluster4 {
+     installer-> Hypervisor
+     installer -> ImageServer
+     label = Birther
    }
    MDB -> FleetManager [style=dotted];   
    MDB -> Hypervisor [style=dotted];
