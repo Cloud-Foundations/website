@@ -8,17 +8,17 @@ digraph G {
       label = IAM
    }
    subgraph cluster0 {
-   ImageServer [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/imageserver/README.md"]
-   Imaginator [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/imaginator/README.md"]
+   ImageServer [URL="Dominator/cmd/imageserver/index.html"]
+   Imaginator [URL="Dominator/cmd/imaginator/index.html"]
    Imaginator -> ImageServer
    AmiPublisher -> ImageServer
    AmiPublisher -> ImageUnpacker
       label =  Imaginator
    }
    subgraph cluster1 {
-   Dominator [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/user-guide/README.md"]
-   MDB [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/mdbd/README.md"]
-   Subd [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/subd/README.md"]
+   Dominator [URL="Dominator/user-guide/index.html"]
+   MDB [URL="Dominator/cmd/mdbd/index.html"]
+   Subd [URL="Dominator/cmd/subd/index.html"]
    Dominator -> MDB
    Dominator -> Subd
    Dominator -> ImageServer
@@ -26,8 +26,8 @@ digraph G {
     label =  Dominator
    }
    subgraph cluster2 {
-     Hypervisor [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/hypervisor/README.md"]
-     FleetManager [URL="https://github.com/Cloud-Foundations/Dominator/blob/master/cmd/fleet-manager/README.md"]
+     Hypervisor [URL="Dominator/cmd/hypervisor/index.html"]
+     FleetManager [URL="Dominator/cmd/fleet-manager/index.html"]
      FleetManager -> Hypervisor
      Hypervisor -> ImageServer [style=dotted];
      FleetManager -> keymasterd
