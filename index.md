@@ -42,24 +42,33 @@ be approved for what.
 
 ### Imaginator
 
-The imaginator cluster includes all tools for image creation
+The imaginator cluster includes all tools for
+[image creation](Dominator/cmd/imaginator/index.html)
 and distribution. The system generates images for AWS, OpenStack,
-and [SmallStack](SmallStack/DesignDoc.html) (see below).
+and [SmallStack](Dominator/design-docs/SmallStack/index.html) (see below).
 
-### [SmallStack](SmallStack/DesignDoc.html)
+### [SmallStack](Dominator/design-docs/SmallStack/index.html)
 
-[SmallStack](SmallStack/DesignDoc.html) was the answer to the question
-of how to manage our fleet of on-prem VMs given the complete shutdown
+[SmallStack](Dominator/design-docs/SmallStack/index.html) was the answer to the
+question of how to manage our fleet of on-prem VMs given the complete shutdown
 of the OpenStack environment. While there were tools like proxmux that
 could take over the environment we found them with several
 limitations.
 
-### [Dominator](Dominator/DesignDoc.html)
+### [Dominator](Dominator/design-docs/Dominator/index.html)
 
 The first of the cluster of the Cloud-Foundations ecosystem.  Designed
 as an open-source improvement of the Assimilator (an internal Google
 system used to deploy and update the OS+Borg to physical machines) its
 goal is machine domination with focus on stateful machines.
+
+### [Birther](Dominator/design-docs/MachineBirthing/index.html)
+
+The [Birther](Dominator/design-docs/MachineBirthing/index.html) is a system or
+set of integrated components which can be used to automatically or
+semi-automatically install (or re-install) an Operating System onto a machine.
+It manages the very beginning of the life-cycle of a machine once it is
+physically installed, connected and powered on.
 
 ## Tool List
 
@@ -68,14 +77,15 @@ The Cloud Foundations tools include:
 
 Name      |Role             |Documents
 ----------|-----------------|------
-[Dominator](https://github.com/Cloud-Foundations/Dominator)|Image-based deploy and patching|[Design Doc](Dominator/DesignDoc.html)
+[Birther](https://github.com/Cloud-Foundations/Dominator)|Image-based installation|[Design Doc](Dominator/design-docs/MachineBirthing/index.html)
+[Dominator](https://github.com/Cloud-Foundations/Dominator)|Image-based deploy and patching|[Design Doc](Dominator/design-docs/Dominator/index.html)
 [Cloud-Gate](https://github.com/Cloud-Foundations/cloud-gate)|AWS access broker|[Design Doc](http://bit.ly/356rtXp)
 [Keymaster](https://github.com/Cloud-Foundations/keymaster)|Authentication|[Design Doc](Keymaster/DesignDoc.html)
-[SmallStack](https://github.com/Cloud-Foundations/Dominator)|Virtual Machine Management|[Design Doc](SmallStack/DesignDoc.html)
+[SmallStack](https://github.com/Cloud-Foundations/Dominator)|Virtual Machine Management|[Design Doc](Dominator/design-docs/SmallStack/index.html)
 
 
 ---------------
 
 ## Some final remarks
 
-Copyright 2019-2020 cloud-foundations.org
+Copyright 2019-2024 cloud-foundations.org
